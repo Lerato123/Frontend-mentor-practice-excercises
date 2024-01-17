@@ -1,0 +1,164 @@
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --Soft-blue: rgb(139, 172, 218);
+    --Cyan: rgb(0, 255, 247);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--main-BG);
+}
+
+p > * {
+    font-size: 1.125em;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper .card {
+    background: var(--card-BG);
+    padding: 1.2em;
+    width: 340px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #0000003d;
+    transition: .3s ease-in-out;
+}
+
+.wrapper .card .cube {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper .card .cube .active-state:hover::before {
+    content: " ";
+    position: absolute;
+    background: url(./nft-preview-card-component-main/images/icon-view.svg) no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .card .cube .active-state:hover::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.468)
+}
+
+.wrapper .card .cube img {
+    height: 300px;
+    width: 300px;
+    display:  flex;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.wrapper .card h3:hover, .author span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+} 
+
+.wrapper .card h3 {
+    padding: 20px 0;
+    color: var(--White);
+}
+
+.wrapper .card p {
+    color: var(--Soft-blue) !important;
+}
+
+.count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.count .ethereum, .day {
+    display: flex;
+    padding: 1.5em 0;
+}
+
+.count .ethereum span, p {
+    color: var(--Cyan);
+    padding-left: 4px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    padding: 1.2em 0;
+}
+
+.card .line {
+    height: .1px;
+    background: var(--line);
+}
+
+.author img {
+    width: 50px;
+    padding-right: 8px;
+}
+
+.author p span {
+    color: var(--White);
+}
+
+.attribution {
+    font-size: 1.2em;
+}
+
+
+
+
+
+/* Styles for screens up to 175px (Mobile) */
+@media only screen and (max-width: 375px) {
+    
+  .wrapper .card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    width: 380px;
+   
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+
+  .count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 12px;
+    
+  }
+}
+
