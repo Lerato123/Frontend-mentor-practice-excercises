@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -49,7 +49,7 @@ p > * {
 .wrapper .card .cube .active-state:hover::before {
     content: " ";
     position: absolute;
-    background: url(./nft-preview-card-component-main/images/icon-view.svg) no-repeat;
+    background: url(./images/icon-view.svg) no-repeat;
     top: 0;
     left: 0;
     width: 100%;
@@ -116,6 +116,7 @@ p > * {
     display: flex;
     align-items: center;
     padding: 1.2em 0;
+    
 }
 
 .author img {
@@ -123,13 +124,13 @@ p > * {
     outline: 2px solid var(--White);
     border-radius: 50%;
 }
-}
 
 .author p {
     padding-left: 12px;
 }
 
 .author p span {
+
     color: var(--White);
 }
 
