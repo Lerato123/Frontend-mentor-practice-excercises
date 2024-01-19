@@ -120,7 +120,7 @@ p > * {
 
 .author img {
     width: 50px;
-    outline: 2px solid red;
+    outline: 2px solid var(--White);
     border-radius: 50%;
 }
 }
