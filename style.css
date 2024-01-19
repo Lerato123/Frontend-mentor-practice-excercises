@@ -107,20 +107,26 @@ p > * {
     padding-left: 4px;
 }
 
+.card .line {
+    height: .1px;
+    background: var(--line);
+}
+
 .author {
     display: flex;
     align-items: center;
     padding: 1.2em 0;
 }
 
-.card .line {
-    height: .1px;
-    background: var(--line);
-}
-
 .author img {
     width: 50px;
-    padding-right: 8px;
+    outline: 2px solid red;
+    border-radius: 50%;
+}
+}
+
+.author p {
+    padding-left: 12px;
 }
 
 .author p span {
